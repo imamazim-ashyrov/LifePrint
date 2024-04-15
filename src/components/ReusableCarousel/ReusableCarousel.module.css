@@ -1,0 +1,67 @@
+.cardWrapper {
+  padding-inline: clamp(5px, 0.8vw, 10px);
+  outline: none;
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.controls {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.controls ul,
+.controls li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.controls :global(.slick-active) button {
+  border: none;
+  background-color: var(--color-button-default);
+}
+
+.dotButton {
+  width: 24px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.arrowButton {
+  padding: 5px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .controls {
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  .controls ul {
+    gap: 10px;
+  }
+
+  .dotButton {
+    width: 20px;
+  }
+}

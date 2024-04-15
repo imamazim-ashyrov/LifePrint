@@ -1,0 +1,68 @@
+.inputContainer,
+.modalInputContainer,
+.labeledTextarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.button {
+  justify-self: end;
+  grid-column: 1/-1;
+}
+
+.modalForm {
+  grid-template-columns: 1fr 1fr;
+}
+
+.labeledInput span,
+.labeledTextarea span {
+  position: absolute;
+  color: var(--grey-700-text);
+  font-size: 14px;
+}
+
+.labeledInput span {
+  right: 20px;
+  top: 7%;
+}
+
+.labeledTextarea {
+  height: 15.8em;
+}
+
+.labeledTextarea span {
+  bottom: 12px;
+  right: 20px;
+}
+
+.errorText {
+  color: red;
+  font-size: 15px;
+  height: 1.6em;
+  margin: 0 0 10px 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .form,
+  .modalForm {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5em;
+  }
+
+  .button {
+    grid-column: 1/-1;
+  }
+
+  .labeledTextarea {
+    height: 150px;
+    margin-top: -1em;
+  }
+}
